@@ -1,0 +1,21 @@
+# 정렬 알고리즘 baekjoon 1764 듣보잡 
+
+# 듣보잡과 명단의 수를 입력
+n, m = map(int, input().split()) 
+# 시간을 줄이기 위한 list가 아닌 set 사용 (list를 쓰다가 시간 초과가 2번이 났음)
+arr_1 = set()
+arr_2 = set()
+
+# 듣보잡을 arr_1에 입력해줌
+for i in range(n):
+    arr_1.add(input())
+# 명단을 arr_2에 입력하줌
+for i in range(m):
+    arr_2.add(input())
+
+# arr 는 arr_1 과 arr_2의 교집합 다른말로 둘다 중복되어있는 리스트를 만듬
+arr = sorted(list(arr_1 & arr_2))
+# 길이와 리스트 안에있는 것들을 출력
+print(len(arr))
+for i in arr:
+    print(i)
