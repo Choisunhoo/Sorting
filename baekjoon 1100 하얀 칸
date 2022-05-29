@@ -1,0 +1,24 @@
+# baekjoon 1100 하얀 칸 
+
+# 말의 개수를 초기화 
+cnt = 0
+
+# 8 * 8 크기의 체스판이니 8번 반복 
+for x in range(8):
+    # 체스판의 정보 입력 
+    data = list(input())
+    # x번째 줄이 홀수 인경우 0 2 4 6 번째 자리에 말 유무 확인 
+    if x % 2 == 0:
+        for i in range(0, 8, 2):
+            print(i)
+            if data[i] == "F":
+                cnt += 1 
+    # x번 째 줄이 짝수인 경우 1 3 5 7 번째 자리에 말 유무 확인 
+    else:
+        for i in range(1, 8, 2):
+            print(i)
+            if data[i] == "F":
+                cnt += 1 
+
+# 결과 출력 
+print(cnt)
