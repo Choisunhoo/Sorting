@@ -1,0 +1,17 @@
+# baekjoon 1259 팰린드롬수 
+
+# while 반복문을 통해 지정된 브레이크가 나올때까지 반복문 반복 
+while True:
+    # 숫자열을 입력
+    n = input()
+    # 숫자열이 0 일 경우 반복문 종료
+    if n == "0":
+        break
+    
+    # 정답을 초기화
+    answer = "no"
+    # 만약 숫자열이 팬린드롬수 인경우 정답 여부를 바꿈
+    if n == n[::-1]:
+       answer = "yes"
+    # 반복문 마다 정답 출력 
+    print(answer) 
